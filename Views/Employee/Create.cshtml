@@ -1,0 +1,24 @@
+﻿@model EmployeeViewModel
+
+
+@{
+    ViewData["Title"] = "Create";
+   
+}
+
+<h1>create new Employee </h1>
+<br />
+<br />
+
+<form asp-action="Create" enctype="multipart/form-data">@* this for know that the form will contain file*@
+   <div> 
+    <partial name="PartialViews/CreateEditPartial"></partial>
+    <input type="submit" value="Submit" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light"> Back To List </a>
+   </div>
+</form>
+@section validationScriptSection {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
